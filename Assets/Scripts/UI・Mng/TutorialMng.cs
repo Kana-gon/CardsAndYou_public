@@ -30,13 +30,14 @@ public class TutorialMng : MonoBehaviour
         //TODO 長押しに変更
         SwitchTutorial("プレイヤーカードは死亡した。\nしかしあなたはまだプレイヤーであれる。");
         yield return new WaitForSeconds(3);
-        SwitchTutorial("あなたは自分のカーソルで、プレイヤーの動作を代替できる。\nそれはあなた自身であるからだ。\nあなた自身であるから、カーソルに攻撃を受けるとダメージを負う。");
-        yield return new WaitForSeconds(10);
-        SwitchTutorial("プレイヤーの動作、カードへのインタラクトは、右クリックで代替できる。\n採取ポイントに右クリック長押し:採取  キャラクターを右クリック:会話 ");
-        yield return new WaitForSeconds(10);
-        SwitchTutorial("武器も右クリックで操作できる。\n右クリック長押し:狙いを定める 右クリックを離す:発射");
+        SwitchTutorial("カーソルに攻撃を受けるとダメージを負う。");//あなたは自分のカーソルで、プレイヤーの動作を代替できる。\nそれはあなた自身であるからだ。\nあなた自身であるから、
         yield return new WaitForSeconds(6);
-        DisappearTutorial();
+        SwitchTutorial("カードへのインタラクトは、右クリックで代替できる。\n\n採取ポイントに右クリック長押し:採取  キャラクターを右クリック:会話 ");
+        yield return new WaitForSeconds(10);
+        SwitchTutorial("武器も右クリックで操作できる。\n\n右クリック長押し:狙いを定める 右クリックを離す:発射");
+        yield return new WaitForSeconds(15);
+        SwitchTutorial("");
+
 
 
     }

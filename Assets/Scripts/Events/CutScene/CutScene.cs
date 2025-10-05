@@ -48,16 +48,16 @@ public class CutScene : MonoBehaviour
         Destroy(playerCard);
     }
     [Button("敵01起動イベント")]
-    private void enemyActivate()//戦闘開始まで連続で
+    private void enemyActivate()
     {
         gameMng.EnemyActivate();
-        battleStart();
     }
     [Button("戦闘開始演出")]
-    private void battleStart()
+    private void battleStart()//戦闘開始まで連続で
     {
         battleMng.BattleStart();
         StartCoroutine(tutorialMng.Tutorial01());
+        enemyActivate();
     }
     private void tutorial_appearDebris()//?TODO?appear系まとめられないかなあ 書くのが楽になるだけで処理は変わらない、むしろ余計な段階を踏むのでまとめる必要はないかも知れない
     {
